@@ -8,6 +8,7 @@
   :root{
     --bg:#0d0f1e;--card:#141728;--text:#e8eaf2;--muted:#9aa0b8;
     --accent:#7c3aed;--accent2:#06b6d4;--border:rgba(255,255,255,.08);
+    --warn:#f43f5e;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
@@ -33,18 +34,19 @@
   .toggle button.active{background:linear-gradient(135deg,#7c3aed,#2563eb);color:#fff;border-color:transparent}
   h1{font-size:22px;margin:28px 0 6px}
   h2{font-size:18px;margin:30px 0 10px;color:#fff;border-left:3px solid var(--accent);padding-left:10px}
+  h3{font-size:15px;margin:18px 0 6px;color:#fff}
   p,li{color:var(--text);font-size:15px;margin-bottom:10px}
   ul{padding-left:22px;margin-bottom:12px}
   li{margin-bottom:6px}
   .meta{color:var(--muted);font-size:13px;margin-bottom:4px}
   .box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin:16px 0}
+  .box.alert{border-color:rgba(244,63,94,.45);background:rgba(244,63,94,.07)}
   a{color:var(--accent2)}
   table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
   th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
   th{background:rgba(124,58,237,.12)}
   .lang{display:none}
   .lang.active{display:block}
-  .fill{color:#facc15;font-weight:600}
   footer{text-align:center;color:var(--muted);font-size:13px;margin-top:40px;padding-top:20px;border-top:1px solid var(--border)}
 </style>
 </head>
@@ -61,152 +63,236 @@
 
   <!-- ========================= TÜRKÇE (KVKK) ========================= -->
   <div class="lang active" id="tr">
-    <h1>Gizlilik Politikası</h1>
-    <p class="meta">Son güncelleme: <span class="fill">[01 Temmuz 2026]</span></p>
-    <p class="meta">Yürürlük tarihi: <span class="fill">[01 Temmuz 2026]</span></p>
+    <h1>Gizlilik Politikası ve Topluluk Standartları</h1>
+    <p class="meta">Son güncelleme: 23 Temmuz 2026</p>
+    <p class="meta">Yürürlük tarihi: 23 Temmuz 2026</p>
 
     <div class="box">
-      <p><strong>Veri Sorumlusu:</strong> <span class="fill">[Prompt Crafter]</span> ("biz", "TalkDate")</p>
-      <p><strong>İletişim:</strong> <span class="fill">[Promptcrafter.app@gmail.com]</span></p>
+      <p><strong>Veri Sorumlusu:</strong> Prompt Crafter ("biz", "TalkDate")</p>
+      <p><strong>İletişim:</strong> <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a></p>
+      <p><strong>Çocuk güvenliği iletişim noktası:</strong> <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a></p>
       <p><strong>Uygulama:</strong> TalkDate (Android paketi: <code>com.talkdate.app</code>)</p>
     </div>
 
-    <p>TalkDate, farklı dilleri konuşan kişilerin eşleşerek dil pratiği yaptığı ve sosyalleştiği bir mobil uygulamadır. Bu Gizlilik Politikası, 6698 sayılı <strong>Kişisel Verilerin Korunması Kanunu (KVKK)</strong> ve ilgili mevzuat kapsamında kişisel verilerinizin nasıl işlendiğini açıklar. Avrupa Birliği'nde bulunan kullanıcılar için <strong>GDPR</strong> hükümleri de uygulanır (İngilizce bölüme bakınız).</p>
+    <p>TalkDate, farklı dilleri konuşan kişilerin eşleşerek dil pratiği yaptığı ve sosyalleştiği bir mobil uygulamadır. Uygulamanın çekirdek işlevi <strong>kullanıcı eşleştirmedir (matchmaking)</strong>. Bu belge, kişisel verilerinizin 6698 sayılı <strong>Kişisel Verilerin Korunması Kanunu (KVKK)</strong> kapsamında nasıl işlendiğini açıklar ve aynı zamanda TalkDate'in <strong>herkese açık topluluk standartlarını</strong> içerir. Avrupa Birliği'nde bulunan kullanıcılar için <strong>GDPR</strong> hükümleri de uygulanır (İngilizce bölüme bakınız).</p>
 
-    <h2>1. Yaş Sınırı</h2>
-    <p>TalkDate yalnızca <strong>18 yaş ve üzeri</strong> kişilerin kullanımına yöneliktir. 18 yaşından küçüklerden bilerek veri toplamayız. 18 yaşından küçük olduğunu tespit ettiğimiz hesapları kapatırız.</p>
+    <h2>1. Yaş Sınırı ve Reşit Olmayanların Engellenmesi</h2>
+    <p>TalkDate yalnızca <strong>18 yaş ve üzeri</strong> kişilerin kullanımına yöneliktir. Uygulamanın çekirdek işlevi eşleştirme olduğu için:</p>
+    <ul>
+      <li>Kayıt sırasında doğum tarihi / yaş beyanı istenir ve 18 yaşından küçük olduğu anlaşılan kayıtlar tamamlanamaz.</li>
+      <li>Google Play'in <strong>reşit olmayanların erişimini kısıtlama (Restrict Minor Access)</strong> araçları uygulamamız için etkinleştirilmiştir.</li>
+      <li>18 yaşından küçüklerden bilerek veri toplamayız. Reşit olmayan bir kullanıcıya ait olduğu tespit edilen hesaplar bildirim yapılmaksızın kapatılır ve verileri silinir.</li>
+      <li>Çocuğunuzun bize veri sağladığını düşünüyorsanız <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a> adresine yazın; hesabı ve verileri sileriz.</li>
+    </ul>
 
-    <h2>2. İşlediğimiz Kişisel Veriler</h2>
+    <h2>2. Çocuk Güvenliği Standartları (CSAE Yasağı)</h2>
+    <div class="box alert">
+      <p><strong>TalkDate, çocukların cinsel istismarı ve sömürüsüne (CSAE) yönelik her türlü içerik ve davranışa karşı sıfır tolerans uygular.</strong></p>
+    </div>
+    <p>Aşağıdakiler kesinlikle yasaktır ve tespit edildiğinde hesap kalıcı olarak kapatılır:</p>
+    <ul>
+      <li>Çocukların cinsel istismarına ilişkin her türlü materyalin (CSAM) oluşturulması, yüklenmesi, paylaşılması veya talep edilmesi.</li>
+      <li>Bir çocuğa yönelik uygunsuz iletişim, çocuk tacizi amaçlı arkadaşlık kurma (grooming) ve buna hazırlık niteliğindeki davranışlar.</li>
+      <li>Reşit olmayan bir kişinin cinselleştirilmesi; reşit olmayan kişilerin görüntülerinin cinsel içerikli biçimde paylaşılması.</li>
+      <li>Cinsel şantaj (sextortion), çocuk ticareti veya bunların teşviki.</li>
+      <li>Kendini reşit gösteren sahte profillerle bu özelliklere erişmeye çalışmak.</li>
+    </ul>
+
+    <h3>2.1 Bildirme ve Engelleme</h3>
+    <p>Her kullanıcı, uygulama içinden diğer kullanıcıları <strong>engelleyebilir</strong> ve uygunsuz içerik veya davranışları <strong>bildirebilir</strong> (sohbet ekranı ve profil ekranındaki "Bildir / Report" seçeneği). Ayrıca her konuda <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a> adresine doğrudan bildirim gönderebilirsiniz. Tüm bildirimler incelenir.</p>
+
+    <h3>2.2 Müdahale ve Yasal Bildirim</h3>
+    <p>CSAM içeriğinden fiilen haberdar olduğumuzda içeriği derhal kaldırır, ilgili hesabı kalıcı olarak kapatır ve olayı yürürlükteki çocuk güvenliği mevzuatı uyarınca yetkili makamlara — <a href="https://report.cybertip.org/" target="_blank" rel="noopener">National Center for Missing &amp; Exploited Children (NCMEC)</a> ve/veya bulunduğumuz ülkedeki yetkili kuruma — bildiririz. Google Play tarafından iletilen CSAE bildirimleri için belirlenmiş iletişim noktamız yukarıda belirtilen e-posta adresidir.</p>
+
+    <h2>3. İşlediğimiz Kişisel Veriler</h2>
     <table>
       <tr><th>Kategori</th><th>Veriler</th></tr>
-      <tr><td>Kimlik & Hesap</td><td>E-posta adresi, Google ile giriş yaptıysanız Google hesap kimliğiniz</td></tr>
+      <tr><td>Kimlik &amp; Hesap</td><td>E-posta adresi, Google ile giriş yaptıysanız Google hesap kimliğiniz</td></tr>
+      <tr><td>Yaş doğrulama</td><td>Beyan ettiğiniz doğum tarihi / yaş</td></tr>
       <tr><td>Profil</td><td>Ad, yaş, cinsiyet, kendinizi tanıtan biyografi, profil ve galeri fotoğrafları (10 adede kadar), ana diliniz, öğrendiğiniz dil, seviye, ilgi alanları</td></tr>
       <tr><td>Eşleşme tercihleri</td><td>Görüşmek istediğiniz cinsiyet, yaş aralığı, engellediğiniz kullanıcılar, beğeni/kaydırma kayıtları, eşleşmeler</td></tr>
       <tr><td>İletişim içeriği</td><td>Gönderdiğiniz metin mesajları ve sesli mesajlar (ses kayıtları)</td></tr>
-      <tr><td>Yapay zekâ işleme</td><td>Dil bilgisi düzeltmesi, çeviri ve AI koç "Tally" yanıtları için mesaj metinlerinizin Google Gemini'ye iletilmesi</td></tr>
-      <tr><td>Kullanım & oyunlaştırma</td><td>XP, seri (streak), tamamlanan görevler, premium üyelik durumu, uygulama içi etkinlik</td></tr>
-      <tr><td>Teknik veriler</td><td>Cihaz bilgileri, uygulama sürümü, bildirim izinleri, çökme/teşhis verileri</td></tr>
+      <tr><td>Yapay zekâ işleme</td><td>Dil bilgisi düzeltmesi, çeviri ve AI koç "Tally" yanıtları için sunucumuza ve oradan Google Gemini API'ye iletilen mesaj metinleriniz (bkz. Bölüm 5)</td></tr>
+      <tr><td>Güvenlik &amp; moderasyon</td><td>Gönderdiğiniz veya hakkınızda gönderilen bildirimler (report), engelleme kayıtları, moderasyon kararları</td></tr>
+      <tr><td>Kullanım &amp; oyunlaştırma</td><td>XP, seri (streak), tamamlanan görevler, premium üyelik durumu, uygulama içi etkinlik</td></tr>
+      <tr><td>Teknik veriler</td><td>Cihaz bilgileri, uygulama sürümü, bildirim izinleri, çökme/teşhis verileri, reklam tanımlayıcısı</td></tr>
       <tr><td>Geri bildirim</td><td>Uygulama içinde bize ilettiğiniz geri bildirim mesajları</td></tr>
     </table>
-    <p>Konum (GPS) verisi <strong>toplamıyoruz</strong>. Yalnızca seçtiğiniz dil/ülke bilgisini kullanırız.</p>
+    <p>Konum (GPS) verisi <strong>toplamıyoruz</strong> — ne hassas ne de yaklaşık konum. Yalnızca sizin seçtiğiniz dil/ülke bilgisini kullanırız.</p>
 
-    <h2>3. Verilerin İşlenme Amaçları ve Hukuki Sebepler</h2>
+    <h2>4. Verilerin İşlenme Amaçları ve Hukuki Sebepler</h2>
     <ul>
       <li>Hesap oluşturma ve kimlik doğrulama — <em>sözleşmenin kurulması/ifası</em></li>
+      <li>Yaş sınırının uygulanması ve reşit olmayanların engellenmesi — <em>yasal yükümlülük ve meşru menfaat</em></li>
       <li>Eşleşme, sohbet ve sesli mesaj hizmetlerinin sunulması — <em>sözleşmenin ifası</em></li>
-      <li>Yapay zekâ destekli dil düzeltme ve çeviri — <em>açık rızanız</em></li>
-      <li>Güvenlik, kötüye kullanım ve sahte hesapların önlenmesi, şikayet incelemesi — <em>meşru menfaat ve yasal yükümlülük</em></li>
+      <li>Yapay zekâ destekli dil düzeltme, çeviri ve AI koç yanıtları — <em>açık rızanız</em></li>
+      <li>Güvenlik, kötüye kullanım ve sahte hesapların önlenmesi, bildirim (report) incelemesi, çocuk güvenliği — <em>meşru menfaat ve yasal yükümlülük</em></li>
       <li>Reklam gösterimi (ücretsiz kullanıcılar) — <em>açık rızanız</em></li>
       <li>Abonelik yönetimi ve ödeme — <em>sözleşmenin ifası</em></li>
       <li>Bildirim gönderimi — <em>açık rızanız (cihaz izni)</em></li>
     </ul>
 
-    <h2>4. İçerik Denetimi ve Erişim</h2>
-    <p>Kullanıcı güvenliğini sağlamak, şikayetleri incelemek ve yasa dışı/uygunsuz içeriği önlemek amacıyla; mesajlar, fotoğraflar ve sesli mesajlar dahil paylaşılan içeriklere yetkili personelimiz tarafından <strong>erişilebilir ve incelenebilir</strong>. İçerikler altyapımızda (Firebase) saklanır.</p>
+    <h2>5. Yapay Zekâ Kullanımı (Tally / Google Gemini)</h2>
+    <p>TalkDate, dil öğrenme deneyimini desteklemek için üçüncü taraf bir yapay zekâ servisi olan <strong>Google Gemini API</strong>'yi kullanır. Bu özelliği kullandığınızda:</p>
+    <ul>
+      <li><strong>Ne gönderilir:</strong> Yalnızca düzeltilmesini, çevrilmesini veya AI koç "Tally"nin yanıtlamasını istediğiniz <strong>metin</strong> ve bu metnin dil/seviye bağlamı gönderilir.</li>
+      <li><strong>Ne gönderilmez:</strong> Adınız, e-posta adresiniz, fotoğraflarınız, sesli mesajlarınız, eşleşme listeniz veya diğer profil verileriniz yapay zekâ servisine gönderilmez.</li>
+      <li><strong>Nasıl gönderilir:</strong> İstekler doğrudan cihazınızdan değil, kontrolümüzdeki güvenli bir sunucu (Google Cloud Run üzerinde çalışan aracı servis) üzerinden iletilir. API anahtarlarımız uygulamaya gömülü değildir.</li>
+      <li><strong>Saklama:</strong> Aracı sunucumuz yapay zekâ isteklerinin içeriğini kalıcı olarak saklamaz. Mesajlarınızın kendisi, sohbet geçmişiniz olarak yalnızca kendi altyapımızda (Firebase) tutulur.</li>
+      <li><strong>Model eğitimi:</strong> Verileriniz, yapay zekâ modellerinin eğitilmesi amacıyla tarafımızca kullanılmaz ve bu amaçla paylaşılmaz.</li>
+      <li><strong>Rıza ve vazgeçme:</strong> Yapay zekâ özelliklerini ilk kullanımdan önce bilgilendirilir ve onayınız istenir. Bu özellikleri kullanmayı reddedebilir, sonrasında <strong>Profil → Privacy &amp; Safety</strong> bölümünden kapatabilirsiniz; uygulamanın eşleşme ve sohbet işlevleri çalışmaya devam eder.</li>
+      <li><strong>Doğruluk:</strong> Yapay zekâ tarafından üretilen düzeltme, çeviri ve öneriler hatalı olabilir; profesyonel dil eğitimi veya tavsiye yerine geçmez.</li>
+    </ul>
+    <p>Google Gemini API'nin verileri işleme biçimi için <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google Gemini API Şartları</a>na bakabilirsiniz.</p>
 
-    <h2>5. Verilerin Paylaşıldığı Üçüncü Taraflar (Veri İşleyenler)</h2>
-    <p>Verilerinizi <strong>satmıyoruz</strong>. Hizmeti sağlamak için aşağıdaki güvenilir hizmet sağlayıcıları kullanırız:</p>
+    <h2>6. İçerik Denetimi ve Erişim</h2>
+    <p>Kullanıcı güvenliğini sağlamak, bildirimleri incelemek ve yasa dışı/uygunsuz içeriği önlemek amacıyla; mesajlar, fotoğraflar ve sesli mesajlar dahil paylaşılan içeriklere yetkili personelimiz tarafından <strong>erişilebilir ve incelenebilir</strong>. İçerikler altyapımızda (Firebase) saklanır. Kurallarımızı ihlal eden içerik kaldırılır; ihlalin ağırlığına göre hesap uyarılır, askıya alınır veya kalıcı olarak kapatılır.</p>
+
+    <h2>7. Verilerin Paylaşıldığı Üçüncü Taraflar (Veri İşleyenler)</h2>
+    <p>Verilerinizi <strong>satmıyoruz</strong>. Hizmeti sağlamak için aşağıdaki hizmet sağlayıcıları kullanırız:</p>
     <table>
       <tr><th>Sağlayıcı</th><th>Amaç</th></tr>
       <tr><td>Google Firebase (Authentication, Firestore, Realtime Database, Cloud Storage)</td><td>Hesap, profil, mesaj, fotoğraf ve ses verilerinin barındırılması</td></tr>
-      <tr><td>Google Gemini API</td><td>Mesajların yapay zekâ ile dil bilgisi düzeltmesi ve çevirisi</td></tr>
-      <tr><td>Google AdMob</td><td>Ücretsiz kullanıcılara reklam gösterimi</td></tr>
-      <tr><td>RevenueCat</td><td>Abonelik durumunun yönetimi (kart/ödeme bilgisi işlemez)</td></tr>
-      <tr><td>Google Play Billing</td><td>Ödeme işlemleri (ödeme verileri doğrudan Google tarafından işlenir)</td></tr>
+      <tr><td>Google Cloud Run (kendi aracı sunucumuz)</td><td>Yapay zekâ isteklerinin güvenli biçimde iletilmesi</td></tr>
+      <tr><td>Google Gemini API</td><td>Mesajların yapay zekâ ile dil bilgisi düzeltmesi, çevirisi ve AI koç yanıtları</td></tr>
+      <tr><td>Google AdMob</td><td>Ücretsiz kullanıcılara reklam gösterimi (AB/İngiltere'de rızanıza bağlı olarak kişiselleştirilmiş veya kişiselleştirilmemiş reklam)</td></tr>
+      <tr><td>Google Play Billing</td><td>Abonelik ve ödeme işlemleri (ödeme verileri doğrudan Google tarafından işlenir; kart bilgileriniz bize ulaşmaz)</td></tr>
     </table>
 
-    <h2>6. Yurt Dışına Aktarım</h2>
+    <h2>8. Yurt Dışına Aktarım</h2>
     <p>Yukarıdaki sağlayıcılar verileri Google'ın yurt dışındaki (AB ve ABD dahil) sunucularında işleyebilir. Bu aktarım, hizmetin sunulabilmesi ve açık rızanız kapsamında gerçekleşir. Sağlayıcılar uygun veri koruma taahhütlerine (ör. standart sözleşme maddeleri) tabidir.</p>
 
-    <h2>7. Saklama Süresi</h2>
-    <p>Verileriniz, hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde profil ve içerik verileriniz makul bir süre içinde silinir veya anonim hale getirilir; yasal saklama yükümlülükleri saklıdır.</p>
+    <h2>9. Saklama Süresi</h2>
+    <p>Verileriniz, hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde profil ve içerik verileriniz makul bir süre içinde silinir veya anonim hale getirilir. Güvenlik ve çocuk güvenliği ihlallerine ilişkin kayıtlar, yasal yükümlülüklerimizi yerine getirmek ve ihlal edenlerin yeniden kayıt olmasını önlemek amacıyla daha uzun süre saklanabilir.</p>
 
-    <h2>8. KVKK Kapsamındaki Haklarınız (Madde 11)</h2>
-    <p>Kişisel verilerinizle ilgili olarak; işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini/silinmesini isteme, işlemeye itiraz etme ve aktarıldığı üçüncü kişileri öğrenme haklarına sahipsiniz. Bu haklarınızı kullanmak için <span class="fill">[Promptcrafter.app@gmail.com]</span> adresine başvurabilirsiniz.</p>
+    <h2>10. KVKK Kapsamındaki Haklarınız (Madde 11)</h2>
+    <p>Kişisel verilerinizle ilgili olarak; işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini/silinmesini isteme, işlemeye itiraz etme ve aktarıldığı üçüncü kişileri öğrenme haklarına sahipsiniz. Bu haklarınızı kullanmak için <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a> adresine başvurabilirsiniz.</p>
     <p>Hesabınızı ve verilerinizi doğrudan uygulama içinden <strong>Profil → Privacy &amp; Safety → Delete Account</strong> yoluyla da silebilirsiniz.</p>
 
-    <h2>9. Veri Güvenliği</h2>
-    <p>Verileriniz şifreli bağlantılar (HTTPS) üzerinden iletilir ve erişim kontrollü altyapıda saklanır. Yapay zekâ isteklerinde API anahtarlarımız uygulamaya gömülü değildir; güvenli sunucu ortamında saklanır.</p>
+    <h2>11. Veri Güvenliği</h2>
+    <p>Verileriniz şifreli bağlantılar (HTTPS) üzerinden iletilir ve erişim kontrollü altyapıda saklanır. Yapay zekâ isteklerinde API anahtarlarımız uygulamaya gömülü değildir; güvenli sunucu ortamında ortam değişkeni olarak saklanır.</p>
 
-    <h2>10. Değişiklikler</h2>
+    <h2>12. Değişiklikler</h2>
     <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde uygulama içinde veya bu sayfada bildirim yaparız.</p>
   </div>
 
   <!-- ========================= ENGLISH (GDPR) ========================= -->
   <div class="lang" id="en">
-    <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: <span class="fill">[01 Temmuz 2026]</span></p>
-    <p class="meta">Effective date: <span class="fill">[01 Temmuz 2026]</span></p>
+    <h1>Privacy Policy &amp; Community Standards</h1>
+    <p class="meta">Last updated: July 23, 2026</p>
+    <p class="meta">Effective date: July 23, 2026</p>
 
     <div class="box">
-      <p><strong>Data Controller:</strong> <span class="fill">[Prompt Crafter]</span> ("we", "TalkDate")</p>
-      <p><strong>Contact:</strong> <span class="fill">[Promptcrafter.app@gmail.com]</span></p>
+      <p><strong>Data Controller:</strong> Prompt Crafter ("we", "TalkDate")</p>
+      <p><strong>Contact:</strong> <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a></p>
+      <p><strong>Child safety point of contact:</strong> <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a></p>
       <p><strong>App:</strong> TalkDate (Android package: <code>com.talkdate.app</code>)</p>
     </div>
 
-    <p>TalkDate is a mobile app where people who speak different languages match to practice languages and socialize. This Privacy Policy explains how we process your personal data under the EU <strong>General Data Protection Regulation (GDPR)</strong> and, for users in Türkiye, the <strong>Personal Data Protection Law (KVKK)</strong> (see the Turkish section).</p>
+    <p>TalkDate is a mobile app where people who speak different languages match to practice languages and socialize. The app's <strong>core functionality is matchmaking</strong>. This document explains how we process your personal data under the EU <strong>General Data Protection Regulation (GDPR)</strong> and, for users in Türkiye, the <strong>Personal Data Protection Law (KVKK)</strong>, and also sets out TalkDate's <strong>publicly available community standards</strong>.</p>
 
-    <h2>1. Age Requirement</h2>
-    <p>TalkDate is intended only for users aged <strong>18 and older</strong>. We do not knowingly collect data from anyone under 18 and will close accounts found to belong to minors.</p>
+    <h2>1. Age Requirement &amp; Blocking Minors</h2>
+    <p>TalkDate is intended only for users aged <strong>18 and older</strong>. Because matchmaking is the app's core functionality:</p>
+    <ul>
+      <li>We collect a date of birth / age declaration at sign-up, and registration cannot be completed by anyone under 18.</li>
+      <li>Google Play's <strong>Restrict Minor Access</strong> controls are enabled for this app.</li>
+      <li>We do not knowingly collect data from anyone under 18. Accounts found to belong to a minor are closed and their data deleted.</li>
+      <li>If you believe your child has provided us with data, email <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a> and we will delete the account and its data.</li>
+    </ul>
 
-    <h2>2. Personal Data We Process</h2>
+    <h2>2. Child Safety Standards (CSAE Prohibition)</h2>
+    <div class="box alert">
+      <p><strong>TalkDate has zero tolerance for child sexual abuse and exploitation (CSAE) in any form.</strong></p>
+    </div>
+    <p>The following are strictly prohibited and result in permanent account termination:</p>
+    <ul>
+      <li>Creating, uploading, sharing, or soliciting child sexual abuse material (CSAM) of any kind.</li>
+      <li>Inappropriate interaction targeted at a child, and grooming or any preparatory conduct toward it.</li>
+      <li>Sexualization of a minor, including sharing imagery of minors in a sexual context.</li>
+      <li>Sextortion, child trafficking, or the promotion of either.</li>
+      <li>Using a falsified adult profile to gain access to these features while under 18.</li>
+    </ul>
+
+    <h3>2.1 Reporting &amp; Blocking</h3>
+    <p>Every user can <strong>block</strong> another user and <strong>report</strong> inappropriate content or behavior from within the app (the "Report" option on the chat and profile screens). You may also report anything directly to <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a>. All reports are reviewed.</p>
+
+    <h3>2.2 Enforcement &amp; Legal Reporting</h3>
+    <p>Upon obtaining actual knowledge of CSAM, we remove the content immediately, permanently terminate the account, and report the incident to the competent authorities in accordance with applicable child safety laws — the <a href="https://report.cybertip.org/" target="_blank" rel="noopener">National Center for Missing &amp; Exploited Children (NCMEC)</a> and/or the relevant regional authority. Our designated point of contact for CSAE notifications from Google Play is the email address listed above.</p>
+
+    <h2>3. Personal Data We Process</h2>
     <table>
       <tr><th>Category</th><th>Data</th></tr>
       <tr><td>Identity &amp; account</td><td>Email address; Google account ID if you sign in with Google</td></tr>
+      <tr><td>Age verification</td><td>The date of birth / age you declare</td></tr>
       <tr><td>Profile</td><td>Name, age, gender, bio, profile and gallery photos (up to 10), native language, learning language, proficiency, interests</td></tr>
       <tr><td>Matching preferences</td><td>Gender preference, age range, blocked users, swipe/like records, matches</td></tr>
       <tr><td>Communications</td><td>Text messages and voice messages (audio recordings) you send</td></tr>
-      <tr><td>AI processing</td><td>Your message text sent to Google Gemini for grammar correction, translation, and AI coach ("Tally") replies</td></tr>
+      <tr><td>AI processing</td><td>Your message text, sent to our server and from there to the Google Gemini API for grammar correction, translation, and AI coach ("Tally") replies (see Section 5)</td></tr>
+      <tr><td>Safety &amp; moderation</td><td>Reports you submit or that are submitted about you, block records, moderation decisions</td></tr>
       <tr><td>Usage &amp; gamification</td><td>XP, streaks, completed quests, premium status, in-app activity</td></tr>
-      <tr><td>Technical</td><td>Device info, app version, notification permissions, crash/diagnostic data</td></tr>
+      <tr><td>Technical</td><td>Device info, app version, notification permissions, crash/diagnostic data, advertising identifier</td></tr>
       <tr><td>Feedback</td><td>Feedback messages you submit in the app</td></tr>
     </table>
-    <p>We do <strong>not</strong> collect GPS location. We only use the language/country you select.</p>
+    <p>We do <strong>not</strong> collect GPS location — neither precise nor approximate. We only use the language/country you select.</p>
 
-    <h2>3. Purposes &amp; Legal Bases (GDPR Art. 6)</h2>
+    <h2>4. Purposes &amp; Legal Bases (GDPR Art. 6)</h2>
     <ul>
       <li>Account creation and authentication — <em>performance of a contract</em></li>
+      <li>Enforcing the age requirement and blocking minors — <em>legal obligation &amp; legitimate interest</em></li>
       <li>Matching, chat, and voice messaging — <em>performance of a contract</em></li>
-      <li>AI-powered language correction and translation — <em>your consent</em></li>
-      <li>Safety, anti-abuse, fake-account prevention, report review — <em>legitimate interest &amp; legal obligation</em></li>
+      <li>AI-powered language correction, translation, and coach replies — <em>your consent</em></li>
+      <li>Safety, anti-abuse, fake-account prevention, report review, child safety — <em>legitimate interest &amp; legal obligation</em></li>
       <li>Advertising (free users) — <em>your consent</em></li>
       <li>Subscription management and payments — <em>performance of a contract</em></li>
       <li>Notifications — <em>your consent (device permission)</em></li>
     </ul>
 
-    <h2>4. Content Moderation &amp; Access</h2>
-    <p>To keep users safe, review reports, and prevent illegal or inappropriate content, shared content — including messages, photos, and voice messages — <strong>may be accessed and reviewed</strong> by authorized personnel. Content is stored on our infrastructure (Firebase).</p>
+    <h2>5. Use of Artificial Intelligence (Tally / Google Gemini)</h2>
+    <p>TalkDate uses a third-party AI service, the <strong>Google Gemini API</strong>, to support the language-learning experience. When you use this feature:</p>
+    <ul>
+      <li><strong>What is sent:</strong> only the <strong>text</strong> you ask to be corrected, translated, or answered by the AI coach "Tally", together with its language/level context.</li>
+      <li><strong>What is not sent:</strong> your name, email address, photos, voice messages, match list, or other profile data are not sent to the AI service.</li>
+      <li><strong>How it is sent:</strong> requests do not go directly from your device; they are relayed through a secure server we control (a proxy service running on Google Cloud Run). Our API keys are never embedded in the app.</li>
+      <li><strong>Retention:</strong> our proxy server does not persistently store the content of AI requests. Your messages themselves are kept only in our own infrastructure (Firebase) as your chat history.</li>
+      <li><strong>Model training:</strong> we do not use your data to train AI models, nor do we share it for that purpose.</li>
+      <li><strong>Consent &amp; opt-out:</strong> you are informed and asked for consent before first use of the AI features. You may decline, and you can turn them off later under <strong>Profile → Privacy &amp; Safety</strong>; matching and chat continue to work.</li>
+      <li><strong>Accuracy:</strong> AI-generated corrections, translations, and suggestions may be inaccurate and are not a substitute for professional language instruction or advice.</li>
+    </ul>
+    <p>For how the Google Gemini API handles data, see the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google Gemini API Terms</a>.</p>
 
-    <h2>5. Third Parties We Share Data With (Processors)</h2>
-    <p>We do <strong>not sell</strong> your data. We use the following trusted service providers to operate the app:</p>
+    <h2>6. Content Moderation &amp; Access</h2>
+    <p>To keep users safe, review reports, and prevent illegal or inappropriate content, shared content — including messages, photos, and voice messages — <strong>may be accessed and reviewed</strong> by authorized personnel. Content is stored on our infrastructure (Firebase). Content that violates our rules is removed; depending on severity, the account is warned, suspended, or permanently terminated.</p>
+
+    <h2>7. Third Parties We Share Data With (Processors)</h2>
+    <p>We do <strong>not sell</strong> your data. We use the following service providers to operate the app:</p>
     <table>
       <tr><th>Provider</th><th>Purpose</th></tr>
       <tr><td>Google Firebase (Authentication, Firestore, Realtime Database, Cloud Storage)</td><td>Hosting account, profile, message, photo, and voice data</td></tr>
-      <tr><td>Google Gemini API</td><td>AI grammar correction and translation of messages</td></tr>
-      <tr><td>Google AdMob</td><td>Showing ads to free users</td></tr>
-      <tr><td>RevenueCat</td><td>Managing subscription status (no card/payment data processed)</td></tr>
-      <tr><td>Google Play Billing</td><td>Payment processing (handled directly by Google)</td></tr>
+      <tr><td>Google Cloud Run (our own proxy server)</td><td>Securely relaying AI requests</td></tr>
+      <tr><td>Google Gemini API</td><td>AI grammar correction, translation, and coach replies</td></tr>
+      <tr><td>Google AdMob</td><td>Showing ads to free users (personalized or non-personalized subject to your consent in the EU/UK)</td></tr>
+      <tr><td>Google Play Billing</td><td>Subscription and payment processing (handled directly by Google; we never receive your card details)</td></tr>
     </table>
 
-    <h2>6. International Transfers</h2>
+    <h2>8. International Transfers</h2>
     <p>These providers may process data on Google's servers outside your country (including the EU and the USA). Such transfers rely on appropriate safeguards (e.g. standard contractual clauses) and, where applicable, your consent.</p>
 
-    <h2>7. Data Retention</h2>
-    <p>We keep your data while your account is active. When you delete your account, your profile and content are deleted or anonymized within a reasonable period, subject to legal retention obligations.</p>
+    <h2>9. Data Retention</h2>
+    <p>We keep your data while your account is active. When you delete your account, your profile and content are deleted or anonymized within a reasonable period. Records relating to safety and child-safety violations may be kept longer to meet our legal obligations and to prevent banned users from re-registering.</p>
 
-    <h2>8. Your Rights (GDPR Art. 15–22)</h2>
-    <p>You have the right to access, rectify, erase, restrict, object to, and port your personal data, and to withdraw consent at any time. To exercise these rights, contact <span class="fill">[Promptcrafter.app@gmail.com]</span>.</p>
+    <h2>10. Your Rights (GDPR Art. 15–22)</h2>
+    <p>You have the right to access, rectify, erase, restrict, object to, and port your personal data, and to withdraw consent at any time. To exercise these rights, contact <a href="mailto:promptcrafter.app@gmail.com">promptcrafter.app@gmail.com</a>.</p>
     <p>You can also delete your account and data directly in the app via <strong>Profile → Privacy &amp; Safety → Delete Account</strong>. EU users may also lodge a complaint with their local data protection authority.</p>
 
-    <h2>9. Data Security</h2>
-    <p>Data is transmitted over encrypted connections (HTTPS) and stored on access-controlled infrastructure. Our AI API keys are never embedded in the app; they are kept in a secure server environment.</p>
+    <h2>11. Data Security</h2>
+    <p>Data is transmitted over encrypted connections (HTTPS) and stored on access-controlled infrastructure. Our AI API keys are never embedded in the app; they are stored as environment variables in a secure server environment.</p>
 
-    <h2>10. Changes</h2>
+    <h2>12. Changes</h2>
     <p>We may update this policy from time to time. We will notify you of material changes in the app or on this page.</p>
   </div>
 
   <footer>
-    © <span class="fill">[2026]</span> TalkDate. <span id="foot-tr">Tüm hakları saklıdır.</span><span id="foot-en" style="display:none">All rights reserved.</span>
+    © 2026 TalkDate. <span id="foot-tr">Tüm hakları saklıdır.</span><span id="foot-en" style="display:none">All rights reserved.</span>
   </footer>
 </div>
 
